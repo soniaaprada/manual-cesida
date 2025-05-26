@@ -3,11 +3,12 @@ import NavMenu from '~/components/NavMenu.vue'
 </script>
 
 <template>
-    <aside>
-        
-        <NavMenu />
+    <div class="viewport">
+        <aside class="sidebar">
 
-        <!-- <h1>nav</h1>
+            <NavMenu />
+
+            <!-- <h1>nav</h1>
         <ul>
             <li>
                 <NuxtLink to="/">Home</NuxtLink>
@@ -19,17 +20,31 @@ import NavMenu from '~/components/NavMenu.vue'
                 <NuxtLink to="/identificador">Identificador</NuxtLink>
             </li>
         </ul> -->
-    </aside>
-    <div>
-        <slot />
+        </aside>
+        <div class="content">
+            <slot />
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
+.viewport {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
 
-@use "/assets/scss/main.scss";
-.router-link-active {
-    background-color: blue;
-    color: white;
+    .sidebar {
+        background-color: lightpink;
+        display: flex;
+        width: 25%;
+        min-width: 240px;
+
+    }
+
+    .content {
+        background-color: lightblue;
+        flex: 1;
+    }
 }
 </style>

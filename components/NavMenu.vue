@@ -31,7 +31,7 @@ const tipografia = [
 ]
 
 const color = [
-  
+
 ]
 
 const reticulas = [
@@ -58,7 +58,7 @@ const sistemaAudiovisual = [
 ]
 
 const aplicaciones = [
-  
+
 ]
 
 </script>

@@ -1,15 +1,15 @@
 <script setup></script>
 
 <template>
-    <div>
+    <div class="viewport">
         <slot />
     </div>
 </template>
 
 <style scoped lang="scss">
-@use "@/assets/scss/main.scss";
-.router-link-active {
-    background-color: blue;
-    color: white;
+.viewport {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 </style>
