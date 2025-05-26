@@ -1,8 +1,13 @@
-<script setup></script>
+<script setup>
+import NavMenu from '~/components/NavMenu.vue'
+</script>
 
 <template>
     <aside>
-        <h1>nav</h1>
+        
+        <NavMenu />
+
+        <!-- <h1>nav</h1>
         <ul>
             <li>
                 <NuxtLink to="/">Home</NuxtLink>
@@ -13,7 +18,7 @@
             <li>
                 <NuxtLink to="/identificador">Identificador</NuxtLink>
             </li>
-        </ul>
+        </ul> -->
     </aside>
     <div>
         <slot />
@@ -21,6 +26,8 @@
 </template>
 
 <style scoped lang="scss">
+
+@use "/assets/scss/main.scss";
 .router-link-active {
     background-color: blue;
     color: white;
