@@ -1,29 +1,20 @@
 <script setup>
-import { ref } from 'vue'
-
-defineProps({
+const props = defineProps({
   title: String,
   items: Array,
-  path: String,         //enlace título 
-  isHighlight: Boolean
+  path: String,
+  isHighlight: Boolean,
+  isOpen: Boolean,
+  toggle: Function
 })
-
-const isOpen = ref(false)
-
-const toggle = () => {
-  isOpen.value = !isOpen.value
-}
 </script>
 
-
 <template>
-  <div>
-    <!-- título como enlace NuxtLink, al click abre/cierra -->
+  <div class="nav-section">
     <NuxtLink :to="path" @click.prevent="toggle" style="cursor: pointer;">
       {{ title }}
     </NuxtLink>
 
-    <!-- lista de items, solo visible si está abierto -->
     <ul v-if="isOpen">
       <li v-for="item in items" :key="item.text">
         {{ item.text }}
