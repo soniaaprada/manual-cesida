@@ -12,7 +12,7 @@ const sections = [
       { text: 'Tono' }
     ],
     path: '/nosotros',
-    
+
   },
   {
     id: 'identificador',
@@ -108,20 +108,13 @@ const toggleSection = (id) => {
 <template>
   <nav class="nav-menu">
     <div class="header">
-        <img class="logo" src="" alt="" /> 
-        <!-- habría que incluir el logo en todas sus versiones si queremos ponerlo variable -->
-        <h1>Manual de marca</h1>
+      <img class="logo" src="" alt="" />
+      <!-- habría que incluir el logo en todas sus versiones si queremos ponerlo variable -->
+      <h1>Manual de marca</h1>
     </div>
-    <NavSection
-      v-for="section in sections"
-      :key="section.id"
-      :title="section.title"
-      :items="section.items"
-      :path="section.path"
-      :isHighlight="section.isHighlight"
-      :isOpen="openId === section.id"
-      :toggle="() => toggleSection(section.id)"
-    />
+    <NavSection v-for="section in sections" :key="section.id" :title="section.title" :items="section.items"
+      :path="section.path" :isHighlight="section.isHighlight" :isOpen="openId === section.id"
+      :toggle="() => toggleSection(section.id)" />
   </nav>
 </template>
 
@@ -130,26 +123,24 @@ const toggleSection = (id) => {
 
 
 
-  .nav-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  padding: 2rem;
+  overflow: scroll;
 
-    .header{
-          h1{
-            font-family: 'Mono';
-            font-size: 1.2rem;
-            
-        }
+  .header {
+    h1 {
+      font-family: 'Atkinson Mono';
+      font-size: 1.2rem;
 
-        img{
-          
-        }
     }
-    
 
+    img {}
   }
 
 
+}
 </style>

@@ -1,2 +1,1 @@
-@use './variables.scss' as vars;
-@use './fonts.scss' as *;
+// He movido los partials y el main a los ajustes en "nuxt.config.ts" y en teoría ya funciona bien global sin llamarlo todo el rato.
