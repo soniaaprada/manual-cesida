@@ -34,6 +34,7 @@ import NavMenu from '~/components/NavMenu.vue'
     width: 100vw;
     height: 100vh;
 
+   
     .sidebar {
         background-color: lightpink;
         display: flex;
