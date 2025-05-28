@@ -7,9 +7,9 @@ definePageMeta({
 <template>
     <div>
         <h1>cesida prueba</h1>
-        <Button text="VAMOS" color="negro"></Button>
+        <Button link="/nosotros" text="VAMONOS" color="bn_primary" />
+        <Button link="/color" text="MIGUEL" color="rr_primary" />
     </div>
-    
 </template>
 
 <style scoped lang="scss"></style>
