@@ -7,8 +7,7 @@ definePageMeta({
 <template>
     <div>
         <h1>cesida prueba</h1>
-        <Button link="/nosotros" text="VAMONOS" color="bn_primary" />
-        <Button link="/color" text="MIGUEL" color="rr_primary" />
+        <Button link="/nosotros" color="bn_primary">VAMOS</Button>
     </div>
 </template>
 

@@ -6,10 +6,6 @@ const props = defineProps({
         type: String,
         default: '/',
     },
-    text: {
-        type: String,
-        default: 'botón',
-    },
     color: {
         type: String,
         default: 'negro',
@@ -18,7 +14,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <NuxtLink :class="['button', color]" :to="link"><span>{{ text }}</span></NuxtLink>
+    <NuxtLink :class="['button', color]" :to="link"><span>
+            <slot></slot>
+        </span></NuxtLink>
 </template>
 
 <style scoped lang="scss">
