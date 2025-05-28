@@ -5,10 +5,11 @@ definePageMeta({
 </script>
 
 <template>
-    <h1>cesida prueba</h1>
-    <NuxtLink to="/nosotros">
-        <h2>vamos</h2>
-    </NuxtLink>
+    <div>
+        <h1>cesida prueba</h1>
+        <Button text="VAMOS" color="negro"></Button>
+    </div>
+    
 </template>
 
 <style scoped lang="scss"></style>

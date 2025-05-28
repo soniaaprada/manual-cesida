@@ -37,3 +37,10 @@ p{
     font-size: clamp(1rem, calc(0.45rem + 1.17vw), 1.25rem);
     line-height: clamp(1.25rem, calc(0.55rem + 1.17vw), 1.5rem);
 }
+
+button{
+    font-family: 'Onest';
+    font-weight: 600;
+    font-size: clamp(1rem, 0.833rem + 2.67vw, 2rem);
+    line-height: clamp(1.25rem, 0.8rem + 2.59vw, 2.25rem);
+}
