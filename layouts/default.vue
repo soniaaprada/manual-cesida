@@ -5,24 +5,12 @@ import NavMenu from '~/components/NavMenu.vue'
 <template>
     <div class="viewport">
         <aside class="sidebar">
-
             <NavMenu />
-
-            <!-- <h1>nav</h1>
-        <ul>
-            <li>
-                <NuxtLink to="/">Home</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/nosotros">Nosotros</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink to="/identificador">Identificador</NuxtLink>
-            </li>
-        </ul> -->
         </aside>
-        <div class="content">
-            <slot />
+        <div class="content_wrapper">
+            <div class="content">
+                <slot />
+            </div>
         </div>
     </div>
 </template>
@@ -33,19 +21,29 @@ import NavMenu from '~/components/NavMenu.vue'
     flex-direction: row;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
-   
     .sidebar {
         background-color: lightpink;
         display: flex;
         width: 25%;
-        min-width: 240px;
+        min-width: 300px;
 
     }
 
-    .content {
+    .content_wrapper {
         background-color: lightblue;
+        display: flex;
+        justify-content: center;
         flex: 1;
+        overflow: scroll;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 50%;
+        }
     }
 }
 </style>

@@ -1,6 +1,21 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import NavSection from './NavSection.vue'
+
+// Importar por separado isotipo y logotipo si queremos que quede más fluido y no se note el desplazamiento
+const logos = ['/img/logo_circ.svg', '/img/logo_cora.svg', '/img/logo_estr.svg', '/img/logo_cuad.svg', '/img/logo_tria.svg'];
+
+const current_logo = ref(0);
+
+let timer
+
+onMounted(() => {
+  timer = setInterval(() => {
+    current_logo.value = (current_logo.value + 1) % logos.length
+  }, 800)
+});
+
+onUnmounted(() => clearInterval(timer));
 
 const sections = [
   {
@@ -96,9 +111,9 @@ const sections = [
     items: [],
     path: '/aplicaciones'
   }
-]
+];
 
-const openId = ref(null)
+const openId = ref(null);
 
 const toggleSection = (id) => {
   openId.value = openId.value === id ? null : id
@@ -108,9 +123,10 @@ const toggleSection = (id) => {
 <template>
   <nav class="nav-menu">
     <div class="header">
-      <img class="logo" src="" alt="" />
-      <!-- habría que incluir el logo en todas sus versiones si queremos ponerlo variable -->
-      <h1>Manual de marca</h1>
+      <div class="logo_wrapper">
+        <img class="logo" :src="logos[current_logo]" alt="Logotipo de CESIDA" />
+      </div>
+      <h4>Manual de marca</h4>
     </div>
     <NavSection v-for="section in sections" :key="section.id" :title="section.title" :items="section.items"
       :path="section.path" :isHighlight="section.isHighlight" :isOpen="openId === section.id"
@@ -130,23 +146,18 @@ const toggleSection = (id) => {
   gap: 1.5rem;
   padding: 2rem;
   overflow: scroll;
-  overflow-y: scroll;        // Permite el scroll vertical
-  scrollbar-width: none;     // Firefox
-  -ms-overflow-style: none;  // Internet Explorer y Edge
+  overflow-y: scroll; // Permite el scroll vertical
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // Internet Explorer y Edge
 
   &::-webkit-scrollbar {
-    display: none;           // Chrome, Safari y Opera
+    display: none; // Chrome, Safari y Opera
   }
-  
 
   .header {
-    h1 {
-      font-family: 'Atkinson Mono';
-      font-size: 1.2rem;
-
-    }
-
-    img {}
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
   }
 
 
