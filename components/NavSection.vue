@@ -27,6 +27,7 @@ const props = defineProps({
 .nav-section {
   display: flex;
   flex-direction: column;
+  
 
   a,
   .nuxt-link {
@@ -53,6 +54,7 @@ const props = defineProps({
     padding-left: 1rem;
     color: $negro;
     gap: 1rem;
+    margin-top: 1rem;
 
     .item {
       cursor: auto;

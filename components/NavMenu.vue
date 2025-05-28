@@ -130,6 +130,14 @@ const toggleSection = (id) => {
   gap: 1.5rem;
   padding: 2rem;
   overflow: scroll;
+  overflow-y: scroll;        // Permite el scroll vertical
+  scrollbar-width: none;     // Firefox
+  -ms-overflow-style: none;  // Internet Explorer y Edge
+
+  &::-webkit-scrollbar {
+    display: none;           // Chrome, Safari y Opera
+  }
+  
 
   .header {
     h1 {
