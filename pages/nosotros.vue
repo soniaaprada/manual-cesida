@@ -31,7 +31,6 @@
                         lo que realmente importa.</p>
                 </div>
             </div>
-
         </Section>
         <Section title="Tono" class="section-title">
             <p class="section-text">Siempre nos dirigimos a las personas con un tono cercano para crear un entorno de

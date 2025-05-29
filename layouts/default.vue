@@ -24,7 +24,6 @@ import NavMenu from '~/components/NavMenu.vue'
     overflow: hidden;
 
     .sidebar {
-        background-color: lightpink;
         display: flex;
         width: 25%;
         min-width: fit-content;
@@ -32,7 +31,6 @@ import NavMenu from '~/components/NavMenu.vue'
     }
 
     .content_wrapper {
-        background-color: lightblue;
         display: flex;
         padding: 2rem;
         justify-content: center;

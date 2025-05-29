@@ -126,6 +126,7 @@ const toggleSection = (id) => {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
+  border-right: 4px solid $negro;
   overflow: scroll;
   scrollbar-width: none; // Firefox
   -ms-overflow-style: none; // Internet Explorer y Edge
@@ -137,7 +138,12 @@ const toggleSection = (id) => {
   .header {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
 
     h4 {
       margin-left: 0.4rem;
