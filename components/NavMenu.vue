@@ -41,7 +41,7 @@ const sections = [
     title: 'Tipografía',
     items: [
       { text: 'Principal' },
-      { text: 'Secundarias' },
+      { text: 'Secundaria' },
       { text: 'Estilos' }
     ],
     path: '/tipografia'
@@ -49,7 +49,9 @@ const sections = [
   {
     id: 'color',
     title: 'Color',
-    items: [],
+    items: [{
+      text: 'Paleta de colores'
+    }],
     path: '/color'
   },
   {
@@ -77,6 +79,7 @@ const sections = [
       { text: 'Curva Cesida' },
       { text: 'Retícula' },
       { text: 'Mosca' },
+      { text: 'Mosca Sección' },
       { text: 'Banner aislado' },
       { text: 'Cartela informativa' },
       { text: 'Transición' },
