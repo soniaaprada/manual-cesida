@@ -1,21 +1,6 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import NavSection from './NavSection.vue'
-
-// Importar por separado isotipo y logotipo si queremos que quede más fluido y no se note el desplazamiento
-const logos = ['/img/logo_circ.svg', '/img/logo_cora.svg', '/img/logo_estr.svg', '/img/logo_cuad.svg', '/img/logo_tria.svg'];
-
-const current_logo = ref(0);
-
-let timer
-
-onMounted(() => {
-  timer = setInterval(() => {
-    current_logo.value = (current_logo.value + 1) % logos.length
-  }, 800)
-});
-
-onUnmounted(() => clearInterval(timer));
 
 const sections = [
   {
@@ -123,9 +108,7 @@ const toggleSection = (id) => {
 <template>
   <nav class="nav-menu">
     <div class="header">
-      <div class="logo_wrapper">
-        <img class="logo" :src="logos[current_logo]" alt="Logotipo de CESIDA" />
-      </div>
+      <Imagotipo />
       <h4>Manual de marca</h4>
     </div>
     <NavSection v-for="section in sections" :key="section.id" :title="section.title" :items="section.items"
@@ -142,7 +125,6 @@ const toggleSection = (id) => {
 .nav-menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 1.5rem;
   padding: 2rem;
   overflow: scroll;
@@ -159,7 +141,5 @@ const toggleSection = (id) => {
     flex-direction: column;
     gap: .5rem;
   }
-
-
 }
 </style>

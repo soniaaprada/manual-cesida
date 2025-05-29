@@ -34,6 +34,7 @@ import NavMenu from '~/components/NavMenu.vue'
     .content_wrapper {
         background-color: lightblue;
         display: flex;
+        padding: 2rem;
         justify-content: center;
         flex: 1;
         overflow: scroll;
@@ -42,7 +43,8 @@ import NavMenu from '~/components/NavMenu.vue'
             display: flex;
             flex-direction: column;
             gap: 3rem;
-            width: 50%;
+            height: fit-content;
+            width: clamp(40vw, 50%, 80vw);
         }
     }
 }
