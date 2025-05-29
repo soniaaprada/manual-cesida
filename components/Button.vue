@@ -9,25 +9,40 @@ const props = defineProps({
     color: {
         type: String,
         default: 'negro',
+    },
+    width: {
+        type: String,
+        default: 'hug',
     }
 })
 </script>
 
 <template>
-    <NuxtLink :class="['button', color]" :to="link"><span>
+    <NuxtLink :class="['button', color, width === 'fill' ? 'fill' : 'hug']" :to="link">
+        <span>
             <slot></slot>
-        </span></NuxtLink>
+        </span>
+    </NuxtLink>
 </template>
 
 <style scoped lang="scss">
 .button {
     display: flex;
-    width: fit-content;
+    align-items: center;
+    justify-content: center;
     height: fit-content;
     border-radius: 8px;
     padding: .75rem 2rem;
     cursor: pointer;
     border: solid 4px transparent;
+
+    &.hug {
+        width: fit-content;
+    }
+
+    &.fill {
+        width: 100%;
+    }
 }
 
 .bn_primary {

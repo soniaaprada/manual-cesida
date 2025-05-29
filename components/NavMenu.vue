@@ -32,7 +32,7 @@ const sections = [
     title: 'Submarcas',
     items: [
       { text: 'Usos' }
-    
+
     ],
     path: '/submarcas'
   },
@@ -105,8 +105,10 @@ const toggleSection = (id) => {
 <template>
   <nav class="nav-menu">
     <div class="header">
-      <Imagotipo />
-      <h4>Manual de marca</h4>
+      <NuxtLink to="/">
+        <Imagotipo />
+        <h4>Manual de marca</h4>
+      </NuxtLink>
     </div>
     <NavSection v-for="section in sections" :key="section.id" :title="section.title" :items="section.items"
       :path="section.path" :isHighlight="section.isHighlight" :isOpen="openId === section.id"
@@ -115,17 +117,12 @@ const toggleSection = (id) => {
 </template>
 
 <style scoped lang="scss">
-@use '/assets/scss/variables' as *;
-
-
-
 .nav-menu {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
   overflow: scroll;
-  overflow-y: scroll; // Permite el scroll vertical
   scrollbar-width: none; // Firefox
   -ms-overflow-style: none; // Internet Explorer y Edge
 
@@ -138,7 +135,7 @@ const toggleSection = (id) => {
     flex-direction: column;
     gap: .5rem;
 
-    h4{
+    h4 {
       margin-left: 0.4rem;
     }
   }

@@ -27,7 +27,7 @@ const props = defineProps({
 .nav-section {
   display: flex;
   flex-direction: column;
-  
+
 
   a,
   .nuxt-link {

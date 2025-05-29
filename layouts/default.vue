@@ -27,7 +27,7 @@ import NavMenu from '~/components/NavMenu.vue'
         background-color: lightpink;
         display: flex;
         width: 25%;
-        min-width: 300px;
+        min-width: fit-content;
 
     }
 
