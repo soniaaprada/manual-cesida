@@ -26,6 +26,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 section {
+    
     display: flex;
     flex-direction: column;
     gap: 1rem;

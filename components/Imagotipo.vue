@@ -45,7 +45,7 @@ watch(() => props.static, (new_value) => {
 .imagotipo {
     display: flex;
     align-items: end;
-    gap: .2rem;
+    gap: .6rem;
 
     .iso_wrapper {
         display: flex;

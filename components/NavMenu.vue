@@ -31,11 +31,8 @@ const sections = [
     id: 'submarcas',
     title: 'Submarcas',
     items: [
-      { text: 'Construcción' },
-      { text: 'Área de respeto' },
-      { text: 'Tamaños mínimos' },
-      { text: 'Positivo y negativo' },
-      { text: 'Usos incorrectos' }
+      { text: 'Usos' }
+    
     ],
     path: '/submarcas'
   },
@@ -140,6 +137,10 @@ const toggleSection = (id) => {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+
+    h4{
+      margin-left: 0.4rem;
+    }
   }
 }
 </style>
