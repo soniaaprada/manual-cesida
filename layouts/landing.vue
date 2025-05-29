@@ -63,7 +63,7 @@ const shapes = [
     ]),
 ];
 
-const colors = [['$negro', '$negro'], ['$azul', '$cian'], ['$rojo', '$rosa'], ['$verde', '$amarillo']];
+const colors = [['negro', 'negro'], ['azul', 'cian'], ['rojo', 'rosa'], ['verde', 'amarillo']];
 
 const selected_shape = ref('');
 const selected_colors = ref([]);
@@ -79,7 +79,7 @@ function initGrid() {
     const [colorA, colorB] = selected_colors.value;
 
     cells.value = Array.from({ length: total }, () => ({
-        visible: Math.random() < 0.4,
+        visible: Math.random() < 0.5,
         color: Math.random() < 0.5
             ? `color_${colorA.replace('$', '')}`
             : `color_${colorB.replace('$', '')}`,
@@ -181,6 +181,27 @@ onBeforeUnmount(() => {
             &.color_amarillo {
                 color: $amarillo;
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .viewport {
+        .pattern {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .viewport {
+        flex-direction: column;
+        height: auto;
+
+        .pattern {
+            width: 100%;
+            height: auto;
+            justify-content: center;
         }
     }
 }

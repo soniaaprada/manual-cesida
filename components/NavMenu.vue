@@ -1,6 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import NavSection from './NavSection.vue'
+
+const route = useRoute()
 
 const sections = [
   {
@@ -12,7 +15,7 @@ const sections = [
       { text: 'Tono' }
     ],
     path: '/nosotros',
-    
+
 
   },
   {
@@ -101,6 +104,13 @@ const sections = [
 
 const openId = ref(null);
 
+onMounted(() => {
+  const matchingSection = sections.find(section => section.path === route.path)
+  if (matchingSection) {
+    openId.value = matchingSection.id
+  }
+})
+
 const toggleSection = (id) => {
   openId.value = openId.value === id ? null : id
 }
@@ -115,7 +125,7 @@ const toggleSection = (id) => {
       </NuxtLink>
     </div>
     <NavSection v-for="section in sections" :key="section.id" :title="section.title" :items="section.items"
-      :path="section.path" :isHighlight="section.isHighlight" :isOpen="openId === section.id"
+      :path="section.path" :isHighlight="route.path === section.path" :isOpen="openId === section.id"
       :toggle="() => toggleSection(section.id)" />
   </nav>
 </template>
@@ -127,7 +137,7 @@ const toggleSection = (id) => {
   gap: 1.5rem;
   padding: 2rem;
   border-right: 4px solid $negro;
-  overflow: scroll;
+  overflow-y: scroll;
   scrollbar-width: none; // Firefox
   -ms-overflow-style: none; // Internet Explorer y Edge
 

@@ -26,15 +26,23 @@ const props = defineProps({
 
 <style scoped lang="scss">
 section {
-    
+
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    h4 {
+        color: $azul;
+    }
 
     article {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
+        h1 {
+            color: $azul;
+        }
     }
 }
 </style>
