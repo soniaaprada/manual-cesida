@@ -28,7 +28,6 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
 
-
   a,
   .nuxt-link {
     all: unset;
@@ -36,6 +35,7 @@ const props = defineProps({
     text-decoration: none;
     font-family: 'Onest';
     font-size: 1.2rem;
+    cursor: pointer;
 
   }
 
