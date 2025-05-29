@@ -1,7 +1,6 @@
 <script setup></script>
 
 <template>
-    <template>
     <div class="section-content">
         <Section section="Identificador visual" title="Concepto" class="section-title">
             <p class="section-text">Igual que nuestra comunidad es rica por su variedad, nuestro identificador también se basa en la variabilidad. <br><br>
@@ -44,7 +43,7 @@
         </Section>
     </div>
 </template>
-</template>
+
 
 <style scoped lang="scss">
 

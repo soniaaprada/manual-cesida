@@ -1,7 +1,16 @@
 <script setup></script>
 
 <template>
-    <h1>Submarcas</h1>
+     <div class="section-content">
+        <Section section="Identificador visual" title="Concepto" class="section-title">
+            <p class="section-text"> </p>
+            <Image src="" alt="" />
+            
+            
+        </Section>
+        
+
+    </div>
 </template>
 
 <style scoped lang="scss"></style>

@@ -1,8 +1,16 @@
 <script setup></script>
 
 <template>
-    <h1>Retículas</h1>
-    <Image link="/img/sample_image.jpg" alt="imagen de ejemplo" />
+     <div class="section-content">
+        <Section section="Identificador visual" title="Concepto" class="section-title">
+            <p class="section-text"> </p>
+            <Image src="" alt="" />
+            
+            
+        </Section>
+        
+
+    </div>
 </template>
 
 <style scoped lang="scss"></style>
