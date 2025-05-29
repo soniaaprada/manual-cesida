@@ -12,6 +12,7 @@ const sections = [
       { text: 'Tono' }
     ],
     path: '/nosotros',
+    
 
   },
   {

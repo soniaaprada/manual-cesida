@@ -45,7 +45,7 @@ const props = defineProps({
   }
 
   .open {
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .items-list {
